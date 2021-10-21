@@ -1,0 +1,25 @@
+{
+  "name": "ts-project-starting-point",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "env mocha --recursive=true --require=ts-node/register --require=dotenv/config --timeout 60000 --extension=ts --exit",
+    "start": "node dist/index.js",
+    "dev:watch": "env tsc-watch --onSuccess 'node --require=dotenv/config dist/index.js'",
+    "lint": "eslint src/**/*.ts src/*.ts test/**/*.ts test/*.ts",
+    "clean": "rimraf dist/*",
+    "tsc": "tsc",
+    "build": "npm-run-all clean tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hisa63/ts-project-starting-point.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hisa63/ts-project-starting-point/issues"
+  },
+  "homepage": "https://github.com/hisa63/ts-project-starting-point#readme"
+}
